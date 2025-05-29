@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html translate="no">
+<head>
+    <title> Gallery </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+            color: #a07450;
+            min-height: 100vh;
+        }
+        
+        /* Navigasi Menu */
+        .navbar {
+            background-color: #a07450;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin: 0 20px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        .background-area {
+            width: 100%;
+            min-height: 100vh;
+            padding-top: 100px; 
+            background-color: #f5f5f5; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .content-container {
+            width: 100%;
+            max-width: 1200px;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .page-title {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #a07450;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+        
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        
+        .gallery-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        
+        .gallery-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #a07450;
+            font-weight: bold;
+        }
+        
+        .gallery-date {
+            background-color: #a07450;
+            color: white;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .gallery-description {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666;
+            text-align: left;
+        }
+        
+        .quote-container {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .quote-text {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #a07450;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        .quote-author {
+            font-size: 16px;
+            color: #885a2c;
+            font-weight: bold;
+        }
+        
+        .social-media {
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .social-media a {
+            text-decoration: none;
+            color: #885a2c;
+            font-size: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="home.html"> Home </a></li>
+                <li><a href="about.html"> About Me </a></li>
+                <li><a href="education.html"> Education </a></li>
+                <li><a href="galery.html"> Museum </a></li>
+                <li><a href="contact.html"> Contact </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="background-area">
+        <div class="content-container">
+            <h1 class="page-title"> Photo Gallery</h1>
+            
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="balii.jpeg" alt="balii" class="gallery-image">
+                    <div class="gallery-date"> Juli 2023 </div>
+                    <h3 class="gallery-title"> Bali </h3>
+                    <p class="gallery-description"></p>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="" alt="" class="gallery-image">
+                    <div class="gallery-date">Maret 2024</div>
+                    <h3 class="gallery-title">Lomba Sains</h3>
+                    <p class="gallery-description">Berpartisipasi dalam lomba sains tingkat kabupaten. Pengalaman yang sangat berharga dalam mengasah kemampuan di bidang IPA, khususnya Fisika dan Kimia.</p>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="" alt="" class="gallery-image">
+                    <div class="gallery-date">Desember 2023</div>
+                    <h3 class="gallery-title">Bersama Teman Sekelas</h3>
+                    <p class="gallery-description">Foto bersama teman-teman sekelas saat acara perpisahan. Kenangan indah selama 3 tahun menempuh pendidikan bersama di kelas IPA.</p>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="" alt="" class="gallery-image">
+                    <div class="gallery-date">September 2023</div>
+                    <h3 class="gallery-title">Sesi Belajar Kelompok</h3>
+                    <p class="gallery-description">Suasana belajar kelompok mempersiapkan ujian nasional. Belajar bersama membuat materi yang sulit menjadi lebih mudah dipahami.</p>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="" alt="" class="gallery-image">
+                    <div class="gallery-date">Agustus 2023</div>
+                    <h3 class="gallery-title">Praktikum Kimia</h3>
+                    <p class="gallery-description">Kegiatan praktikum di laboratorium kimia sekolah. Pengalaman langsung melakukan eksperimen membuat pemahaman teori menjadi lebih konkret.</p>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="" alt="" class="gallery-image">
+                    <div class="gallery-date">Juli 2023</div>
+                    <h3 class="gallery-title">Study Tour</h3>
+                    <p class="gallery-description">Kegiatan study tour ke tempat-tempat bersejarah dan alam. Pembelajaran di luar kelas yang memberikan wawasan baru tentang sejarah dan geografi Indonesia.</p>
+                </div>
+            </div>
+            
+            <div class="quote-container">
+                <p class="quote-text">"A picture is worth a thousand words, but the memories behind it are priceless."</p>
+                <p class="quote-author">- Anonymous</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
