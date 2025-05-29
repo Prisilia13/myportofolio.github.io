@@ -53,7 +53,7 @@
             text-decoration: none;
             font-size: 16px;
             font-weight: bold;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
             padding: 8px 12px;
             border-radius: 5px;
             display: block;
@@ -61,6 +61,7 @@
         
         .nav-links a:hover {
             background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px);
         }
         
         .background-area {
@@ -91,6 +92,11 @@
             margin-bottom: 30px;
             display: inline-block;
             max-width: 90%;
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-image:hover {
+            transform: scale(1.05);
         }
         
         .profile-name {
@@ -138,11 +144,13 @@
             background-color: #885a2c;
             color: white;
             transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(136, 90, 44, 0.3);
         }
         
+        /* TABLET RESPONSIVE */
         @media screen and (max-width: 768px) {
             .navbar {
-                padding: 10px 0;
+                padding: 12px 0;
             }
             
             .nav-links a {
@@ -155,7 +163,7 @@
             }
             
             .background-area {
-                padding-top: 120px;
+                padding-top: 110px;
                 padding-left: 15px;
                 padding-right: 15px;
             }
@@ -186,18 +194,35 @@
             }
         }
         
+        /* MOBILE RESPONSIVE - MENU TETAP HORIZONTAL */
         @media screen and (max-width: 480px) {
+            .navbar {
+                padding: 10px 0;
+            }
+            
+            .nav-container {
+                padding: 0 10px;
+            }
+            
             .nav-links {
-                flex-direction: column;
-                align-items: center;
+                flex-direction: row; /* TETAP HORIZONTAL */
+                justify-content: center;
+                flex-wrap: wrap;
             }
             
             .nav-links li {
-                margin: 2px 0;
+                margin: 2px 4px; /* MARGIN LEBIH KECIL */
+            }
+            
+            .nav-links a {
+                font-size: 12px; /* FONT LEBIH KECIL */
+                padding: 5px 8px;
             }
             
             .background-area {
-                padding-top: 160px;
+                padding-top: 100px; /* SESUAIKAN DENGAN NAVBAR */
+                padding-left: 10px;
+                padding-right: 10px;
             }
             
             .profile-image {
@@ -213,15 +238,49 @@
                 font-size: 15px;
             }
             
+            .profile-description h3 {
+                font-size: 14px;
+            }
+            
+            /* SOCIAL MEDIA TETAP HORIZONTAL */
             .social-media {
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
+                flex-direction: row; /* TETAP HORIZONTAL */
+                justify-content: center;
+                gap: 8px;
+                margin-top: 20px;
+                flex-wrap: wrap;
             }
             
             .social-media a {
-                width: 150px;
-                text-align: center;
+                font-size: 12px;
+                padding: 6px 10px;
+                margin: 3px;
+                min-width: auto; /* HAPUS WIDTH FIXED */
+            }
+        }
+        
+        /* MOBILE SANGAT KECIL */
+        @media screen and (max-width: 360px) {
+            .nav-links a {
+                font-size: 11px;
+                padding: 4px 6px;
+            }
+            
+            .nav-links li {
+                margin: 1px 2px;
+            }
+            
+            .social-media a {
+                font-size: 11px;
+                padding: 5px 8px;
+            }
+            
+            .profile-name {
+                font-size: 20px;
+            }
+            
+            .profile-description {
+                font-size: 14px;
             }
         }
     </style>
@@ -230,10 +289,10 @@
     <nav class="navbar">
         <div class="nav-container">
             <ul class="nav-links">
-                <li><a href="home.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
                 <li><a href="education.html">Education</a></li>
-                <li><a href="galery.html">Museum</a></li>
+                <li><a href="gallery.html">Museum</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
@@ -243,7 +302,7 @@
         <div class="content-container">
             <img src="adelee.jpeg" alt="Profile Picture" class="profile-image">
     
-            <h3 class="profile-name"> Prisilia Baduang </h3>
+            <h3 class="profile-name">Prisilia Baduang</h3>
             
             <div class="profile-description">
                 <p>Whatever you have done, do it with all your heart is like for God and not for humans.</p>
@@ -251,10 +310,10 @@
             </div>
             
             <div class="social-media">
-                <a href="#">Instagram</a>
-                <a href="#">Facebook</a>
-                <a href="#">TikTok</a>
-                <a href="#">Blogger</a>
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">TikTok</a>
+                <a href="#" target="_blank">Blogger</a>
             </div>
         </div>
     </div>
