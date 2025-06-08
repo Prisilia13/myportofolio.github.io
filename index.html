@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html translate="no">
 <head>
-    <title> Gallery </title>
+    <title>Personal Website</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -19,7 +19,6 @@
             min-height: 100vh;
         }
         
-        /* Navigasi Menu - Sama dengan Home */
         .navbar {
             background-color: #a07450;
             padding: 15px 0;
@@ -74,7 +73,7 @@
             background-color: #f5f5f5;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             padding-left: 20px;
             padding-right: 20px;
             padding-bottom: 40px;
@@ -82,100 +81,81 @@
         
         .content-container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 800px;
             text-align: center;
             padding: 30px 20px;
-        }
-        
-        .page-title {
-            font-size: 36px;
-            margin-bottom: 40px;
-            color: #a07450;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: bold;
-        }
-        
-        .gallery-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .gallery-item {
-            background-color: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.8);
             border-radius: 20px;
-            padding: 25px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
         }
         
-        .gallery-item:hover {
-            transform: translateY(-5px);
-        }
-        
-        .gallery-image {
-            width: 100%;
-            height: 350px;
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
             object-fit: cover;
-            border-radius: 15px;
-            margin-bottom: 15px;
+            border: 5px solid #a07450;
+            margin-bottom: 30px;
+            display: inline-block;
             transition: transform 0.3s ease;
-            border: 3px solid #a07450;
+            box-shadow: 0 5px 15px rgba(160, 116, 80, 0.3);
         }
         
-        .gallery-image:hover {
-            transform: scale(1.02);
+        .profile-image:hover {
+            transform: scale(1.05);
         }
         
-        .gallery-title {
-            font-size: 20px;
-            margin-bottom: 10px;
+        .profile-name {
+            font-size: 32px;
+            margin-bottom: 20px;
             color: #a07450;
             font-weight: bold;
         }
         
-        .gallery-date {
-            background-color: #a07450;
-            color: white;
-            display: inline-block;
-            padding: 6px 15px;
-            border-radius: 20px;
-            margin-bottom: 15px;
-            font-size: 14px;
-            font-weight: bold;
-        }
-        
-        .gallery-description {
-            display: none;
-        }
-        
-        .quote-container {
-            margin-top: 50px;
-            padding: 30px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 20px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .quote-text {
-            font-size: 20px;
+        .profile-description {
+            font-size: 18px;
             line-height: 1.6;
             color: #a07450;
-            margin-bottom: 15px;
-            font-style: italic;
+            margin-bottom: 30px;
+            text-align: center;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
-        .quote-author {
-            font-size: 16px;
+        .profile-description h3 {
+            margin-top: 15px;
+            font-style: italic;
             color: #885a2c;
+            font-size: 16px;
+        }
+        
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .social-media a {
+            text-decoration: none;
+            color: #885a2c;
+            font-size: 16px;
             font-weight: bold;
+            padding: 12px 20px;
+            border: 2px solid #885a2c;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            margin: 5px;
+            min-width: 120px;
+        }
+        
+        .social-media a:hover {
+            background-color: #885a2c;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(136, 90, 44, 0.3);
         }
         
         /* TABLET RESPONSIVE */
@@ -203,31 +183,30 @@
                 padding: 25px 15px;
             }
             
-            .page-title {
+            .profile-image {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .profile-name {
                 font-size: 28px;
-                margin-bottom: 30px;
+                margin-bottom: 15px;
             }
             
-            .gallery-container {
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 25px;
+            .profile-description {
+                font-size: 16px;
+                margin-bottom: 25px;
             }
             
-            .gallery-item {
-                padding: 20px;
+            .social-media {
+                gap: 12px;
+                margin-top: 25px;
             }
             
-            .gallery-image {
-                height: 280px;
-            }
-            
-            .quote-container {
-                padding: 25px;
-                margin-top: 40px;
-            }
-            
-            .quote-text {
-                font-size: 18px;
+            .social-media a {
+                font-size: 14px;
+                padding: 10px 16px;
+                min-width: 100px;
             }
         }
         
@@ -260,53 +239,41 @@
             
             .content-container {
                 padding: 20px 15px;
-            }
-            
-            .page-title {
-                font-size: 24px;
-                margin-bottom: 25px;
-            }
-            
-            .gallery-container {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .gallery-item {
-                padding: 15px;
                 border-radius: 15px;
             }
             
-            .gallery-image {
-                height: 240px;
-                border-radius: 10px;
+            .profile-image {
+                width: 180px;
+                height: 180px;
+                margin-bottom: 20px;
             }
             
-            .gallery-title {
-                font-size: 18px;
+            .profile-name {
+                font-size: 24px;
+                margin-bottom: 15px;
             }
             
-            .gallery-date {
-                font-size: 12px;
-                padding: 4px 12px;
-            }
-            
-            .gallery-description {
-                font-size: 14px;
+            .profile-description {
+                font-size: 15px;
+                margin-bottom: 20px;
                 line-height: 1.5;
             }
             
-            .quote-container {
-                margin-top: 30px;
-                padding: 20px;
+            .profile-description h3 {
+                font-size: 13px;
+                margin-top: 10px;
             }
             
-            .quote-text {
-                font-size: 16px;
+            .social-media {
+                gap: 8px;
+                margin-top: 20px;
             }
             
-            .quote-author {
-                font-size: 14px;
+            .social-media a {
+                font-size: 12px;
+                padding: 8px 12px;
+                min-width: 80px;
+                margin: 3px;
             }
         }
         
@@ -322,28 +289,27 @@
                 padding: 15px 10px;
             }
             
-            .page-title {
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .profile-name {
                 font-size: 20px;
             }
             
-            .gallery-item {
-                padding: 12px;
+            .profile-description {
+                font-size: 14px;
             }
             
-            .gallery-image {
-                height: 220px;
+            .profile-description h3 {
+                font-size: 12px;
             }
             
-            .gallery-title {
-                font-size: 16px;
-            }
-            
-            .gallery-description {
-                font-size: 13px;
-            }
-            
-            .quote-text {
-                font-size: 15px;
+            .social-media a {
+                font-size: 11px;
+                padding: 6px 10px;
+                min-width: 70px;
             }
         }
     </style>
@@ -362,49 +328,20 @@
 
     <div class="background-area">
         <div class="content-container">
-            <h1 class="page-title">Photo Gallery</h1>
+            <img src="adelee.jpeg" alt="Profile Picture" class="profile-image">
+    
+            <h3 class="profile-name">Prisilia Baduang</h3>
             
-            <div class="gallery-container">
-                <div class="gallery-item">
-                    <img src="balii.jpeg" alt="balii" class="gallery-image">
-                    <div class="gallery-date">Juli 2023</div>
-                    <h3 class="gallery-title">Bali</h3>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="graduetion.jpeg" alt="gradute" class="gallery-image">
-                    <div class="gallery-date">7 Mei 2024</div>
-                    <h3 class="gallery-title">High School Graduation</h3>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="" alt="" class="gallery-image">
-                    <div class="gallery-date">Desember 2023</div>
-                    <h3 class="gallery-title">Bersama Teman Sekelas</h3>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="" alt="" class="gallery-image">
-                    <div class="gallery-date">September 2023</div>
-                    <h3 class="gallery-title">Sesi Belajar Kelompok</h3>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="" alt="" class="gallery-image">
-                    <div class="gallery-date">Agustus 2023</div>
-                    <h3 class="gallery-title">Praktikum Kimia</h3>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="" alt="" class="gallery-image">
-                    <div class="gallery-date">Juli 2023</div>
-                    <h3 class="gallery-title">Study Tour</h3>
-                </div>
+            <div class="profile-description">
+                <p>Whatever you have done, do it with all your heart is like for God and not for humans.</p>
+                <h3>[ Colossians 3 : 23 ]</h3>
             </div>
             
-            <div class="quote-container">
-                <p class="quote-text">"A picture is worth a thousand words, but the memories behind it are priceless."</p>
-                <p class="quote-author">- Anonymous</p>
+            <div class="social-media">
+                <a href="https://www.instagram.com/prisiliabaduang13?igsh=MXN2Ym92b2VhbW95OQ==" target="_blank">Instagram</a>
+                <a href="https://www.facebook.com/share/15rukLXweU/" target="_blank">Facebook</a>
+                <a href="https://www.tiktok.com/@prisiliabaduang?_t=ZS-8wKuNr5G4Km&_r=1" target="_blank">TikTok</a>
+                <a href="https://prisiliabaduang1304.blogspot.com/2025/03/about-my-self.html" target="_blank">Blogger</a>
             </div>
         </div>
     </div>
